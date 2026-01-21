@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mallick Store Banner</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f0f2f5;
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+        }
+
+        /* মূল ব্যানার ডিজাইন */
+        .banner-card {
+            width: 800px;
+            background: linear-gradient(180deg, #d6eaff 0%, #ffffff 40%, #ffffff 60%, #b2d8ff 100%);
+            border-radius: 10px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.2), inset 0 0 15px rgba(255,255,255,0.5);
+            padding: 30px;
+            border: 5px solid #ffffff;
+            position: relative;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .header-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        /* ৩ডি ব্যাগ আইকন স্টাইল */
+        .logo-box {
+            flex: 0 0 150px;
+        }
+
+        .bag-icon {
+            font-size: 80px;
+            filter: drop-shadow(5px 5px 5px rgba(0,0,0,0.3));
+            display: block;
+        }
+
+        .shikder-text {
+            font-weight: bold;
+            font-size: 22px;
+            color: #000;
+            margin-top: 5px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+        }
+
+        /* মূল শিরোনাম ৩ডি স্টাইল */
+        .store-title {
+            flex: 1;
+            font-size: 75px;
+            color: #0056b3;
+            margin: 0;
+            padding-right: 40px;
+            text-shadow: 3px 3px 0px #fff, 6px 6px 0px rgba(0,0,0,0.1);
+            letter-spacing: 2px;
+        }
+
+        .proprietor {
+            font-size: 20px;
+            font-weight: bold;
+            color: #333;
+            margin-top: -10px;
+            text-align: right;
+            padding-right: 60px;
+        }
+
+        /* পণ্যের তালিকা */
+        .description {
+            font-size: 18px;
+            color: #004085;
+            font-weight: bold;
+            margin: 20px 0;
+            line-height: 1.6;
+        }
+
+        /* কন্টাক্ট ইনফো */
+        .contact-section {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 30px;
+        }
+
+        .contact-box {
+            text-align: center;
+        }
+
+        .name {
+            font-size: 22px;
+            color: #d12a2a;
+            font-weight: bold;
+            margin-bottom: 5px;
+            text-shadow: 1px 1px 1px rgba(0,0,0,0.1);
+        }
+
+        .phone {
+            font-size: 22px;
+            font-weight: bold;
+            color: #000;
+        }
+
+        /* নিচের ঠিকানা */
+        .footer-address {
+            margin-top: 30px;
+            font-size: 28px;
+            font-weight: bold;
+            color: #000;
+            border-top: 1px solid rgba(0,0,0,0.1);
+            padding-top: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="banner-card">
+        <div class="header-section">
+            <div class="logo-box">
+                <span class="bag-icon">🛍️</span>
+                <div class="shikder-text">Mallick Tea Store</div>
+            </div>
+            <div>
+                <h1 class="store-title">মল্লিক চা স্টোর</h1>
+                <div class="proprietor">প্রোঃ মোঃ হাসান মল্লিক</div>
+            </div>
+        </div>
+
+        <div class="description">
+            এখানে, চা, পান, বিড়ি, সিগারেট, বিস্কুট আরও বিভিন্ন প্রকার মালামাল পাওয়া যায়।<br>
+        </div>
+
+        <div class="contact-section">
+            <div class="contact-box">
+                <div class="name">মোঃ জীবন হাসান</div>
+                <div class="phone">01313138544</div>
+            </div>
+            <div class="contact-box">
+                <div class="name">মোঃ হাসান মল্লিক</div>
+                <div class="phone">01313138544</div>
+            </div>
+        </div>
+
+        <div class="footer-address">
+            মোকছেদপুর বাজার, বরগুনা সদর, বরগুনা-৮৭০০
+        </div>
+    </div>
+
+</body>
+</html>
