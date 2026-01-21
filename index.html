@@ -13,19 +13,21 @@
             background-color: #f0f2f5;
             margin: 0;
             font-family: 'Arial', sans-serif;
+            padding: 10px; /* মোবাইলের জন্য সামান্য গ্যাপ */
         }
 
-        /* মূল ব্যানার ডিজাইন */
+        /* মূল ব্যানার ডিজাইন - রেসপন্সিভ করার জন্য max-width ব্যবহার করা হয়েছে */
         .banner-card {
-            width: 800px;
+            width: 100%;
+            max-width: 800px; 
             background: linear-gradient(180deg, #d6eaff 0%, #ffffff 40%, #ffffff 60%, #b2d8ff 100%);
-            border-radius: 10px;
+            border-radius: 15px;
             box-shadow: 0 15px 35px rgba(0,0,0,0.2), inset 0 0 15px rgba(255,255,255,0.5);
             padding: 30px;
             border: 5px solid #ffffff;
             position: relative;
-            overflow: hidden;
             text-align: center;
+            box-sizing: border-box;
         }
 
         .header-section {
@@ -33,11 +35,12 @@
             justify-content: space-between;
             align-items: center;
             margin-bottom: 20px;
+            flex-wrap: wrap; /* ছোট স্ক্রিনে ফ্লেক্স ভেঙে যাবে */
         }
 
-        /* ৩ডি ব্যাগ আইকন স্টাইল */
         .logo-box {
             flex: 0 0 150px;
+            margin: 0 auto 10px; /* মোবাইলে সেন্টারে থাকবে */
         }
 
         .bag-icon {
@@ -48,74 +51,89 @@
 
         .shikder-text {
             font-weight: bold;
-            font-size: 22px;
+            font-size: 20px;
             color: #000;
             margin-top: 5px;
-            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
         }
 
-        /* মূল শিরোনাম ৩ডি স্টাইল */
         .store-title {
             flex: 1;
-            font-size: 75px;
+            font-size: clamp(40px, 8vw, 75px); /* স্ক্রিন অনুযায়ী ফন্ট ছোট-বড় হবে */
             color: #0056b3;
             margin: 0;
-            padding-right: 40px;
-            text-shadow: 3px 3px 0px #fff, 6px 6px 0px rgba(0,0,0,0.1);
+            text-shadow: 3px 3px 0px #fff, 5px 5px 0px rgba(0,0,0,0.1);
             letter-spacing: 2px;
+            min-width: 250px;
         }
 
         .proprietor {
-            font-size: 20px;
+            font-size: 18px;
             font-weight: bold;
             color: #333;
-            margin-top: -10px;
+            margin-top: 5px;
             text-align: right;
-            padding-right: 60px;
         }
 
-        /* পণ্যের তালিকা */
         .description {
-            font-size: 18px;
+            font-size: clamp(16px, 4vw, 20px);
             color: #004085;
             font-weight: bold;
             margin: 20px 0;
             line-height: 1.6;
         }
 
-        /* কন্টাক্ট ইনফো */
         .contact-section {
             display: flex;
             justify-content: space-around;
             margin-top: 30px;
+            gap: 20px;
+            flex-wrap: wrap; /* মোবাইলে একটির নিচে আরেকটি আসবে */
         }
 
         .contact-box {
             text-align: center;
+            flex: 1;
+            min-width: 200px;
         }
 
         .name {
-            font-size: 22px;
+            font-size: 20px;
             color: #d12a2a;
             font-weight: bold;
             margin-bottom: 5px;
-            text-shadow: 1px 1px 1px rgba(0,0,0,0.1);
         }
 
         .phone {
-            font-size: 22px;
+            font-size: 20px;
             font-weight: bold;
             color: #000;
         }
 
-        /* নিচের ঠিকানা */
         .footer-address {
             margin-top: 30px;
-            font-size: 28px;
+            font-size: clamp(18px, 5vw, 28px);
             font-weight: bold;
             color: #000;
             border-top: 1px solid rgba(0,0,0,0.1);
             padding-top: 15px;
+        }
+
+        /* মোবাইল স্ক্রিনের জন্য বিশেষ পরিবর্তন (Responsive Media Query) */
+        @media (max-width: 600px) {
+            .header-section {
+                flex-direction: column; /* সবকিছু নিচে নিচে চলে আসবে */
+                text-align: center;
+            }
+            .proprietor {
+                text-align: center;
+                margin-bottom: 15px;
+            }
+            .banner-card {
+                padding: 15px;
+            }
+            .bag-icon {
+                font-size: 60px;
+            }
         }
     </style>
 </head>
@@ -134,7 +152,7 @@
         </div>
 
         <div class="description">
-            এখানে, চা, পান, বিড়ি, সিগারেট, বিস্কুট আরও বিভিন্ন প্রকার মালামাল পাওয়া যায়।<br>
+            এখানে চা, পান, বিড়ি, সিগারেট, বিস্কুট সহ আরও বিভিন্ন প্রকার মালামাল পাওয়া যায়।
         </div>
 
         <div class="contact-section">
